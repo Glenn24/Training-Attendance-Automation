@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <title>Training Attendance Automate</title>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--[if lt IE 9]>
+		<script src="assets/js/html5shiv.min.js"></script>
+		<script src="assets/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+			<a id="toggle_btn" href="javascript:void(0);"><i class="fa fa-bars"></i></a>
+            <a id="mobile_btn" class="mobile_btn float-left" href="#sidebar"><i class="fa fa-bars"></i></a>
+            
+            <div class="dropdown mobile-user-menu float-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                    <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
+                    <a class="dropdown-item" href="settings.html">Settings</a>
+                    <a class="dropdown-item" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="active">
+                            <a href="index.html"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
+                        </li>
+                        <li>
+                            <a href="calendar.html"><i class="fa fa-calendar"></i> <span>Calendar</span></a>
+                        </li>
+                        <li>
+                            <a href="settings.html"><i class="fa fa-cog"></i> <span>Settings</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="page-wrapper">
+            <div class="content">
+                <div class="row">
+                    <div class="col-12 text-right p-3">
+                        <a href="#" class="btn btn-primary btn-rounded" data-toggle="modal" data-target="#add"><i class="fa fa-plus"></i> Add</a>
+                        <a href="#" class="btn btn-success btn-rounded text-white" data-toggle="modal" data-target="#create"><i class="fa fa-plus"></i> Create</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card-box">
+                            <div class="card-block">
+								<div class="table-responsive">
+									<table class="datatable table table-stripped ">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Day 1</th>
+                                            <th>Day 2</th>
+                                            <th>Day 3</th>
+                                            <th>Day 4</th>
+                                            <th>Day 5</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Tapagnan, Wilcelle</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Castillo, Justine Lloyd</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Absent</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pintor, Marvin</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Infanta, Brandon</td>
+                                            <td>Present</td>
+                                            <td>Absent</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Solera, Kenneth</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bucaya, Glenn</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valenzuela, Ainalen</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                            <td>Present</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="create" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header text-center bg-primary text-white">
+                        <h4 class="modal-title" style="margin-left: 80px;">NOTE: Update attendance sheet by <br>
+                                                uploading data from MS Teams.</h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label>Upload <span class="text-danger">*</span></label>
+                                <input
+                                    type="file"
+                                    id="docpicker"
+                                    accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+                            </div>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary submit-btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="add" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content modal-md">
+                    <div class="modal-header text-center bg-primary text-white">
+                        <h4 class="modal-title" style="margin-left: 80px;"></h4>
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <div class="row text-center">
+                                    <div class="col-md-12 mb-4">
+                                        <label>StartDate:<span class="text-danger">*</span></label>
+                                        <input type="date" name="" id="">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>EndDate:<span class="text-danger">*</span></label>
+                                        <input type="date" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="m-t-20 text-center">
+                                <button class="btn btn-primary submit-btn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-overlay" data-reff=""></div>
+    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery-3.2.1.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.slimscroll.js"></script>
+    <script src="assets/js/Chart.bundle.js"></script>
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
